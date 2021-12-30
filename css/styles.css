@@ -96,6 +96,7 @@ button:hover {
   display: -ms-flexbox;
   display: flex;
   text-align: center;
+  padding-top: 20px;
 }
 .profile {
   max-width: 700px;
