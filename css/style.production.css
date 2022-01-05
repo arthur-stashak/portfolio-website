@@ -1,10 +1,12 @@
-body, button, input {
+body,
+button,
+input {
   font-family: 'Oxygen', sans-serif;
   font-weight: 700;
   font-size: 14px;
   letter-spacing: 1.4px;
   text-align: center;
-  background-color: #F5F9F9;
+  background-color: #f5f9f9;
 }
 
 h1 {
@@ -29,63 +31,79 @@ a {
   color: #e29578ff;
   text-decoration: underline;
 }
+
 a:visited {
-  /*visited link*/
+  /* visited link */
   color: #83c5beff;
 }
 
 a:active {
-  /*selected link*/
+  /* selected link */
   color: #ffddd2ff;
 }
+
 a:hover {
   /* No underlining when hovering over a link */
   text-decoration: none;
   color: #006d77ff;
 }
+
 .button {
   /* overwrites browser defaults and resets the border */
   border: none;
+
   /* takes the font from the outer container */
   display: inline-block;
-    /* takes the font from the outer container */
+
+  /* takes the font from the outer container */
   font-family: inherit;
+
   /* styles the background color, font color, and text decoration (underline, etc.) of the button */
   background-color: #e29578ff;
   color: white;
   text-decoration: none;
-  /*adds spacing to the button (this will be discussed more in-depth later) */
+
+  /* adds spacing to the button (this will be discussed more in-depth later) */
   padding: 10px;
   border-radius: 3px;
+
   /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   -webkit-transition: 0.2s opacity;
   -o-transition: 0.2s opacity;
   transition: 0.2s opacity;
 }
+
 button {
   /* overwrites browser defaults and resets the border */
   border: none;
+
   /* takes the font from the outer container */
   display: inline-block;
-    /* takes the font from the outer container */
+
+  /* takes the font from the outer container */
   font-family: inherit;
+
   /* styles the background color, font color, and text decoration (underline, etc.) of the button */
   background-color: #e29578ff;
   color: white;
   text-decoration: none;
-  /*adds spacing to the button (this will be discussed more in-depth later) */
+
+  /* adds spacing to the button (this will be discussed more in-depth later) */
   padding: 10px;
   border-radius: 3px;
+
   /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   -webkit-transition: 0.2s opacity;
   -o-transition: 0.2s opacity;
   transition: 0.2s opacity;
 }
+
 button:hover {
   /* lets the mouse appear as a hand when hovering over the button */
   cursor: pointer;
+
   /* reduces the opacity of the button to 80% */
   opacity: 0.8;
 }
@@ -94,6 +112,7 @@ button:hover {
   background-color: #e29578ff;
   color: #2b2b2b;
 }
+
 .page-footer {
   clear: both;
   display: -webkit-box;
@@ -101,29 +120,35 @@ button:hover {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   text-align: center;
   padding-top: 20px;
 }
+
 .profile {
   max-width: 700px;
-  margin: 0px auto;
+  margin: 0 auto;
   padding-top: 30px;
 }
+
 .link__project {
   text-align: center;
 }
+
 .socials {
   width: 30px;
 }
-.socials:hover, .socials:focus {
+
+.socials:hover,
+.socials:focus {
   cursor: pointer;
   opacity: 0.8;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
 }
+
 .profile_portrait {
   float: left;
   width: 250px;
@@ -131,10 +156,12 @@ button:hover {
   margin-right: 10px;
   border-radius: 50%;
 }
+
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
+
 .page-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -142,169 +169,204 @@ button:hover {
   width: 100%;
   padding: 20px;
 }
+
 .page-header__item {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 200px;
-          flex: 0 1 200px;
+  -ms-flex: 0 1 200px;
+  flex: 0 1 200px;
 }
+
 .page-header__item:last-child {
   -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   text-align: right;
 }
+
 .navigation-list {
   list-style-type: none;
 }
+
 .navigation-list li {
   display: inline-block;
   margin-left: 15px;
 }
+
 /* start grid fallback */
 .grid__item {
- display: inline-block;
- width: 33%;
+  display: inline-block;
+  width: 33%;
 }
+
 /* end grid fallback */
 
 @supports (display: grid) {
- .grid {
-   display: -ms-grid;
-   display: grid;
-   /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
-   -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
-   grid-template-columns: 1fr 1fr 1fr;
-   grid-gap: 20px;
-   margin: 0;
+  .grid {
+    display: -ms-grid;
+    display: grid;
 
- }
- .grid__item {
-   background-color: #ffddd2ff;
-   width: auto;
-   min-height: auto;
-   margin: 0;
- }
- .grid__item:last-child {
-   -ms-grid-column: 3;
-   grid-column: 3 / 3;
+    /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
+    -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin: 0;
+  }
 
- }
+  .grid__item {
+    background-color: #ffddd2ff;
+    width: auto;
+    min-height: auto;
+    margin: 0;
+  }
+
+  .grid__item:last-child {
+    -ms-grid-column: 3;
+    grid-column: 3 / 3;
+  }
 }
+
 .grid {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
-  padding: 20px
+  padding: 20px;
 }
+
 .grid__item {
   background-color: #ffddd2ff;
 }
+
 @media all and (max-width: 500px) {
   .grid {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
 }
-@media all and (min-width: 500px) and (max-width: 750px){
+
+@media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
     -ms-grid-columns: 1fr 20px 1fr;
     grid-template-columns: 1fr 1fr;
   }
 }
+
 @media all and (max-width: 750px) {
   .grid {
     grid-gap: 10px;
   }
+
   .grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
+
   h1 {
     font-size: 22px;
   }
 }
+
 @-webkit-keyframes color-change {
   from {
     fill: #edc655;
   }
+
   to {
     fill: #f76414;
   }
 }
+
 @keyframes color-change {
   from {
     fill: #edc655;
   }
+
   to {
     fill: #f76414;
   }
 }
+
 @keyframes color-change {
   0% {
     fill: #edc655;
   }
+
   50% {
     fill: #fcffad;
   }
+
   100% {
     fill: #f76414;
   }
 }
+
 .sun {
   -webkit-animation: 4s color-change infinite alternate linear;
-          animation: 4s color-change infinite alternate linear;
+  animation: 4s color-change infinite alternate linear;
 }
+
 @-webkit-keyframes cloud-move {
   from {
     -webkit-transform: translate(0, 50px);
-            transform: translate(0, 50px);
+    transform: translate(0, 50px);
   }
+
   to {
     -webkit-transform: translate(200px, 50px);
-            transform: translate(200px, 50px);
+    transform: translate(200px, 50px);
   }
 }
+
 @keyframes cloud-move {
   from {
     -webkit-transform: translate(0, 50px);
-            transform: translate(0, 50px);
+    transform: translate(0, 50px);
   }
+
   to {
     -webkit-transform: translate(200px, 50px);
-            transform: translate(200px, 50px);
+    transform: translate(200px, 50px);
   }
 }
+
 .cloud-front {
   -webkit-animation: 30s cloud-move infinite alternate linear;
-          animation: 30s cloud-move infinite alternate linear;
+  animation: 30s cloud-move infinite alternate linear;
 }
+
 @-webkit-keyframes cloud-move-reverse {
   from {
     -webkit-transform: translate(446px, 48px);
-            transform: translate(446px, 48px);
+    transform: translate(446px, 48px);
   }
+
   to {
     -webkit-transform: translate(100px, 48px);
-            transform: translate(100px, 48px);
+    transform: translate(100px, 48px);
   }
 }
+
 @keyframes cloud-move-reverse {
   from {
     -webkit-transform: translate(446px, 48px);
-            transform: translate(446px, 48px);
+    transform: translate(446px, 48px);
   }
+
   to {
     -webkit-transform: translate(100px, 48px);
-            transform: translate(100px, 48px);
+    transform: translate(100px, 48px);
   }
 }
+
 .cloud-back {
   -webkit-animation: 34s cloud-move-reverse infinite alternate linear;
-          animation: 34s cloud-move-reverse infinite alternate linear;
+  animation: 34s cloud-move-reverse infinite alternate linear;
 }
-*, *:before, *:after {
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -327,7 +389,7 @@ button:hover {
   border-radius: 15px;
 }
 
-.screen:after {
+.screen::after {
   content: '';
   display: block;
   position: absolute;
@@ -336,7 +398,7 @@ button:hover {
   right: 20px;
   bottom: 0;
   border-radius: 15px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
   z-index: -1;
 }
 
@@ -426,7 +488,7 @@ button:hover {
   font-size: 14px;
   text-transform: uppercase;
   outline: none;
-  transition: border-color .2s;
+  transition: border-color 0.2s;
 }
 
 .app-form-control::placeholder {
@@ -454,7 +516,7 @@ button:hover {
     margin-right: 12px;
   }
 
-  .app-title:after {
+  .app-title::after {
     display: none;
   }
 }
@@ -480,5 +542,5 @@ button:hover {
 .table {
   position: relative;
   margin: auto;
-  padding: 30px 30px;
+  padding: 30px;
 }
